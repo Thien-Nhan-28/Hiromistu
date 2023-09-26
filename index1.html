@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    article{
+        float: left;
+        width: 20%;
+        height: 100px;
+        vertical-align: center;
+        text-align: center;
+    }
+    section::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    </style>
+</head>
+<body>
+
+    <header>HEADER SECTION</header>
+    <nav>Navigation bar</nav>
+    <article>Index</article>
+    <section class="content" >Content section</section>
+    <section class="footer"><footer>FOOTER SECTION</footer></section>
+
+
+
+
+</body>
+</html>
