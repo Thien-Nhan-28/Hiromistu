@@ -2,35 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-    article{
-        float: left;
-        width: 20%;
-        height: 100px;
-        vertical-align: center;
+
+    <title>Website</title>
+</head>
+<style>
+    :root {
+        --border-solid: 2px solid #000;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    #main {
+        width: 50%;
+        border: var(--border-solid);
+    }
+
+    #header, #nav, #footer {
         text-align: center;
     }
-    section::after {
-        content: "";
-        display: table;
-        clear: both;
+
+    #header {
+        padding: 12px 0;
+        border-bottom: var(--border-solid);
     }
-    </style>
-</head>
+
+    #nav {
+        padding: 12px 0;
+        border-bottom: var(--border-solid);
+    }
+
+    #container {
+        border-bottom: var(--border-solid);
+        display: flex;
+    }
+
+    #container .content-section {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 150px;
+        padding: 0 16px;
+        width: 15%;
+    }
+
+    #container .content-section.left {
+        border-right: var(--border-solid);
+    }
+
+    #container .content-section.right {
+        display: flex;
+        width: 85%;
+        transform: translateX(-10%);
+    }
+
+    #footer .footer-section {
+        padding: 50px ;
+        height: 100px;
+    }
+</style>
 <body>
+<div id="main">
+    <header id="header">Header Section</header>
 
-    <header>HEADER SECTION</header>
-    <nav>Navigation bar</nav>
-    <article>Index</article>
-    <section class="content" >Content section</section>
-    <section class="footer"><footer>FOOTER SECTION</footer></section>
+    <nav id="nav">Navigation Bar</nav>
 
+    <section id="container">
+        <div class="content-section left">Index</div>
+        <div class="content-section right">Content section</div>
+    </section>
 
-
-
+    <footer id="footer">
+        <div class="footer-section">
+            Footer Section
+        </div>
+    </footer>
+</div>
 </body>
 </html>
